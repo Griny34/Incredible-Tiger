@@ -24,11 +24,6 @@ public class ScorCounter : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
-    {
-        _playerPoints = _startPoints;
-    }
-
     public int GetPoint()
     {
         return _playerPoints;
@@ -48,5 +43,10 @@ public class ScorCounter : MonoBehaviour
         _playerPoints -= points;
 
         OnChangedPoints?.Invoke(points);
+    }
+
+    private void Start()
+    {
+        _playerPoints = _startPoints;
     }
 }

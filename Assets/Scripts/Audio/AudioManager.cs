@@ -16,9 +16,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        Instance = this;
-
-        
+        Instance = this;      
 
         foreach(Sound sound in _sounds)
         {
